@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Module Test</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <div class="score-container">
+      <div class="side-title">
+        <h1>ROCK <br>PAPER <br> SCISSORS </h1>
+      </div>
+      <div class="score-display">
+        <p class="score">COMPUTER SCORE </p>
+        <h1 id="cpuScore">0</h1>
+
+      </div>
+      <div class="score-display" style="margin-left:10% ;">
+        <p class="score">YOUR <br> SCORE </p>
+        <h1 id="userScore">0</h1>
+      </div>
+    </div>
+
+    <section class="game">
+      <div class="choice-container" id="choiceContainer">
+        <button class="choice-btn rock" data-value="rock" onclick="userPicked('rock')">
+          <img src="assets/rock.png" alt="ROCK">
+        </button>
+        <div class="line line1"></div>
+        <button class="choice-btn scissor" data-value="scissor" onclick="userPicked('scissor')">
+          <img src="assets/scissor.png" alt="SCISSORS">
+        </button>
+        <div class="line leftSlant"></div>
+        <div class="line rightSlant"></div>
+        <button class="choice-btn paper" data-value="paper" onclick="userPicked('paper')">
+          <img src="assets/paper.png" alt="PAPER">
+        </button>
+      </div>
+    </section>
+
+    <!-- ************************Result container**************** -->
+
+    <section class="result-container" id="resultContainer">
+      <div class="userSelected">
+        <h5>YOU PICKED </h5>
+        <div class="choice-btn paper youPicked" id="YouSelected">
+          <img src="assets/paper.png" alt="PAPER" id="userPickedImg">
+        </div>
+      </div>
+      <div class="display-result" id="resultDisplay">
+        <div>
+          <h1 id="resultText">YOU WIN <br> </h1> <span>AGAINST PC</span>
+        </div>
+        <button class="btn playAgain"> PLAY AGAIN</button>
+      </div>
+      <div class="pcSelected">
+        <h5>PC PICKED </h5>
+        <div class="choice-btn rock pcChose" id="PcSelected">
+          <img src="assets/rock.png" alt="PC ROCK">
+        </div>
+      </div>
+    </section>
+
+    <!-- ****************** Rules modal box************** -->
+    <div class="RulesOfGame">
+      <div class="modalBox" id="rulesBox">
+        <div class="ruleHeading">
+          <h3>GAME RULES</h3>
+        </div>
+        <div class="closeBtn">
+          <img src="assets/closeIcon.png"  alt="closen icon"/>
+        </div>
+        <div class="rules">
+          <ul>
+            <li class="list_item">
+              Rock beats scissors, scissors beat paper, and paper beats rock.
+            </li>
+            <li class="list_item">
+              Agree ahead of time whether you’ll count off “rock, paper,
+              scissors, shoot” or just “rock, paper, scissors.”
+            </li>
+            <li class="list_item">
+              Use rock, paper, scissors to settle minor decisions or simply play
+              to pass the time
+            </li>
+            <li class="list_item">
+              If both players lay down the same hand, each player lays down
+              another hand
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="bottomBtns">
+      <button class="btn rulesBtn" id="rulesButton"> RULES</button>
+      <a class="nextBtn rulesBtn" href="hurray.html"> NEXT </a>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
